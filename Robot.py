@@ -1,14 +1,8 @@
 """
-Классы расположены здесь
+Класс Робот написан сторонним разработчиком
 """
 
-#from abc import ABC, abstractmethod
-class Thing:
-  def __init__(self):
-    pass
-    
-
-class Robot (Thing):
+class Robot ():
     def __init__(self, number: str, name:str)->None:
       self.__number = number
       self.__name = name # приватные поля
@@ -22,7 +16,7 @@ class Robot (Thing):
     def getName(self):
       return self.__name
       
-class Decorator(Thing):
+class Decorator():
   def __init__(self,who):
     self.__who=who
   def getName(self):
