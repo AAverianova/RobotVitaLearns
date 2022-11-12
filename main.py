@@ -2,18 +2,25 @@ from classes import *
 print("Создаём робота...\n")
 
 # Создание робота 
-robot = Robot("АА001221-56", "В") 
+robot = myRobot("АА001221-56", "В") 
 robot.print()
 #Первичное обучение
-decor = FirstLearn(robot)
+robot = FirstLearn(robot)
 #Переименование робота
 robot.setName("Вита")
 robot.print()
 # Проверка что  можно построить
-decor.createHouse()
-decor.createBarn()
-#Переименование робота
-robot.setName("Вита")
-robot.print()
+robot.createHouse()
+robot.createBarn()
+# отправили на завод
+robot = HasWork(robot)
+# полявились доп. функции
+# robot=NewFunction(robot)
 
+#Переименование робота
+robot.setName("Витлик")
+robot.print()
+# проверить новые функции
+# robot.buildFloor()
+# robot.breakFloor()
 
